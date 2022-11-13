@@ -15,7 +15,7 @@ module.exports = {
       },
       colors: {
         gray: {
-          ...colors.neutral,
+          ...colors.zinc,
         },
       },
       keyframes: {

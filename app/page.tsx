@@ -7,10 +7,10 @@ export default async function Home() {
 
   return (
     <>
-      {postIds.map((id) => (
+      {postIds.map((id, index) => (
         <Suspense key={id} fallback={<PostSkeleton />}>
           {/* @ts-expect-error Async Server Component */}
-          <Post id={id} />
+          <Post id={id} index={index + 1} />
         </Suspense>
       ))}
     </>

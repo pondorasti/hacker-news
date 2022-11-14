@@ -3,60 +3,15 @@ import TimeAgo from "javascript-time-ago"
 import en from "javascript-time-ago/locale/en"
 import { hn } from "../lib/hn"
 
-function UpvoteIcon() {
-  return (
-    <svg
-      aria-hidden
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="h-6 w-6 -rotate-90"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
-      />
-    </svg>
-  )
-}
-
 function CommentIcon() {
   return (
-    <svg
-      aria-hidden
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2}
-      stroke="currentColor"
-      className="h-6 w-6 p-[3px]"
-    >
+    <svg aria-hidden height="13" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
-      />
-    </svg>
-  )
-}
-
-function LinkIcon() {
-  return (
-    <svg
-      aria-hidden
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="none"
-      className="h-6 w-6"
-    >
-      <path
-        d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-        fill="currentColor"
+        d="M1 8.04889C1 9.20445 1.81106 10.2112 2.95506 10.3795C3.74011 10.4951 4.53311 10.5839 5.33333 10.646V14L8.27711 11.0562C8.47675 10.8579 8.74471 10.7434 9.02605 10.7363C10.3993 10.6983 11.7691 10.5791 13.1283 10.3795C14.2723 10.2112 15.0833 9.20517 15.0833 8.04817V3.70183C15.0833 2.54484 14.2723 1.53878 13.1283 1.3705C11.444 1.12329 9.74396 0.999465 8.04167 1C6.31411 1 4.61544 1.12639 2.95506 1.3705C1.81106 1.53878 1 2.54556 1 3.70183V8.04817V8.04889Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       />
     </svg>
   )
@@ -64,19 +19,41 @@ function LinkIcon() {
 
 function PersonIcon() {
   return (
-    <svg
-      aria-hidden
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2}
-      stroke="currentColor"
-      className="h-6 w-6 p-[3px]"
-    >
+    <svg aria-hidden height="13" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+        d="M8.49933 3.5C8.49933 4.16304 8.23593 4.79892 7.76709 5.26776C7.29825 5.7366 6.66237 6 5.99933 6C5.33629 6 4.7004 5.7366 4.23156 5.26776C3.76272 4.79892 3.49933 4.16304 3.49933 3.5C3.49933 2.83696 3.76272 2.20107 4.23156 1.73223C4.7004 1.26339 5.33629 1 5.99933 1C6.66237 1 7.29825 1.26339 7.76709 1.73223C8.23593 2.20107 8.49933 2.83696 8.49933 3.5V3.5ZM1 12.912C1.02142 11.6002 1.55756 10.3494 2.49278 9.42936C3.42801 8.50928 4.68739 7.99364 5.99933 7.99364C7.31127 7.99364 8.57065 8.50928 9.50587 9.42936C10.4411 10.3494 10.9772 11.6002 10.9987 12.912C9.43025 13.6312 7.72476 14.0023 5.99933 14C4.21533 14 2.522 13.6107 1 12.912Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  )
+}
+
+function ClockIcon() {
+  return (
+    <svg aria-hidden height="13" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M7.5 3.16667V7.5H10.75M14 7.5C14 8.35359 13.8319 9.19883 13.5052 9.98744C13.1786 10.7761 12.6998 11.4926 12.0962 12.0962C11.4926 12.6998 10.7761 13.1786 9.98744 13.5052C9.19883 13.8319 8.35359 14 7.5 14C6.64641 14 5.80117 13.8319 5.01256 13.5052C4.22394 13.1786 3.50739 12.6998 2.90381 12.0962C2.30022 11.4926 1.82144 10.7761 1.49478 9.98744C1.16813 9.19883 1 8.35359 1 7.5C1 5.77609 1.68482 4.12279 2.90381 2.90381C4.12279 1.68482 5.77609 1 7.5 1C9.22391 1 10.8772 1.68482 12.0962 2.90381C13.3152 4.12279 14 5.77609 14 7.5Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  )
+}
+
+function UpArrowIcon() {
+  return (
+    <svg aria-hidden height="13" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M7.075 14.5V1M7.075 1L1 7.075M7.075 1L13.15 7.075"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       />
     </svg>
   )
@@ -94,50 +71,57 @@ export function PostSkeleton() {
 }
 
 const pStyle =
-  "flex items-center space-x-1 text-sm font-medium text-gray-600 dark:text-gray-400 whitespace-nowrap"
+  "flex items-center space-x-1 text-xs text-gray-600 dark:text-gray-400 truncate leading-[13px]"
 
 TimeAgo.addDefaultLocale(en)
 const timeAgo = new TimeAgo("en-US")
 
-export async function Post({ id }: { id: number }) {
+export async function Post({ id, index }: { id: number; index: number }) {
   const post = await hn.getItem(id)
 
   if (!post) return null
 
   return (
-    <div className="h-18 mt-4 flex flex-row space-x-2 overflow-hidden rounded-2xl p-4 text-zinc-800 dark:text-zinc-100">
-      {/* <div className="mt-0.5 flex flex-col items-center">
-        <UpvoteIcon />
-        <span className="text-xs">{post.score}</span>
-      </div> */}
-      <div className="flex flex-col space-y-1">
-        <h2 className="text-base font-normal">{post.title}</h2>
+    <>
+      <div className="flex flex-col space-y-1 overflow-hidden rounded-xl p-2 text-zinc-800 dark:text-zinc-100">
+        <div className="flex flex-col items-start space-x-1 sm:flex-row sm:items-baseline">
+          <h2 className="truncate text-sm font-medium">
+            {index}. {post.title}
+          </h2>
+          <a
+            href={post.url}
+            className={clsx(
+              "relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100",
+              "cursor-ne-resize text-xs",
+              "text-gray-700 after:bg-orange-500 dark:text-gray-400 hover:dark:text-orange-500",
+              "transition-colors duration-300 ease-in-out after:transition-transform after:duration-300 after:ease-in-out"
+            )}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {new URL(post.url).host.replace(/^www\./, "")}
+          </a>
+        </div>
+
         <div className="flex space-x-3">
           <p className={pStyle}>
-            <UpvoteIcon />
-            <span>{post.score} points</span>
+            <UpArrowIcon />
+            <span>{post.score}</span>
           </p>
           <p className={pStyle}>
             <PersonIcon />
-            <span>
-              by {post.by} {timeAgo.format(post.date)}
-            </span>
+            <span className="">{post.by}</span>
+          </p>
+          <p className={pStyle}>
+            <ClockIcon />
+            <span>{timeAgo.format(post.date)}</span>
           </p>
           <p className={pStyle}>
             <CommentIcon />
             <span>{post.descendants} comments</span>
           </p>
-          <a
-            href={post.url}
-            className={clsx(pStyle, "cursor-ne-resize")}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LinkIcon />
-            <span className="!ml-0.5">{new URL(post.url).host.replace(/^www\./, "")}</span>
-          </a>
         </div>
       </div>
-    </div>
+    </>
   )
 }

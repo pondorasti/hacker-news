@@ -2,8 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Todo
 
-- [ ] https://twitter.com/leeerob/status/1590871034382946304?s=46&t=9FRxsBcPIJlvw5Pf24CIbg
-- [ ] icons, font leading size
+- [x] hoverOnlyWhenSupported
+- [x] icons
+- [ ] font leading size
 
 ## Getting Started
 

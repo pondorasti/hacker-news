@@ -1,4 +1,4 @@
-import { PostSkeleton } from "./Post"
+import { PostSkeleton } from "./components/Post"
 
 export default function Loading() {
   return (

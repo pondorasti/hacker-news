@@ -1,6 +1,7 @@
 import "./globals.css"
 import { Inter } from "@next/font/google"
 import clsx from "clsx"
+import { AnalyticsWrapper } from "./components/Analytics"
 
 const inter = Inter({ variable: "--font-inter", display: "swap" })
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {/* TODO: aria for ordered list */}
           <div className="mt-8 flex w-full flex-col justify-items-stretch">{children}</div>
         </main>
+        <AnalyticsWrapper />
       </body>
     </html>
   )

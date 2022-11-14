@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import TimeAgo from "javascript-time-ago"
 import en from "javascript-time-ago/locale/en"
-import { hn } from "../lib/hn"
+import { hn } from "../../lib/hn"
 
 function CommentIcon() {
   return (

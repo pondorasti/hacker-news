@@ -8,9 +8,9 @@ export function PostSkeleton() {
   /* https://delba.dev/blog/animated-loading-skeletons-with-tailwind */
 
   return (
-    <div className={clsx("h-18 mt-4 flex w-full flex-row space-x-2 rounded-2xl bg-gray-800 p-4")}>
-      <div className="h-3 w-3/5 rounded-lg bg-gray-700"></div>
-      <div className="h-3 w-4/5 rounded-lg bg-gray-600"></div>
+    <div className={clsx("h-18 flex w-full flex-col space-y-1 rounded-xl bg-gray-800/0 p-2")}>
+      <div className="h-5 rounded-lg bg-gray-700"></div>
+      <div className="h-[15px] rounded-md bg-gray-600"></div>
     </div>
   )
 }

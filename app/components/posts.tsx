@@ -2,7 +2,7 @@ import clsx from "clsx"
 import TimeAgo from "javascript-time-ago"
 import en from "javascript-time-ago/locale/en"
 import { hn } from "../../lib/hn"
-import { ClockIcon, CommentIcon, PersonIcon, UpArrowIcon } from "./Icons"
+import { ClockIcon, CommentIcon, PersonIcon, UpArrowIcon } from "./icons"
 
 export function PostSkeleton() {
   /* https://delba.dev/blog/animated-loading-skeletons-with-tailwind */

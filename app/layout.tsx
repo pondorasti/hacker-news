@@ -1,8 +1,8 @@
 import "./globals.css"
 import { Inter } from "@next/font/google"
 import clsx from "clsx"
-import { AnalyticsWrapper } from "./components/Analytics"
-import FramerContext from "./components/FramerContext"
+import { AnalyticsWrapper } from "./components/analytics"
+import FramerContext from "./components/framer-context"
 
 const inter = Inter({ variable: "--font-inter", display: "swap" })
 

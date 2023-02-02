@@ -9,7 +9,7 @@ interface Item {
   // parent // The comment's parent: either another comment or the relevant story.
   // poll // The pollopt's associated poll.
   kids: number[] // The ids of the item's comments, in ranked display order.
-  url: string // The URL of the story.
+  url?: string // The URL of the story.
   score: number // The story's score, or the votes for a pollopt.
   title: string // The title of the story, poll or job. HTML.
   // parts: number[] // A list of related pollopts, in display order.
@@ -55,7 +55,7 @@ async function getItem(id: number): Promise<Item | null> {
     date: new Date(item.time * 1000).getTime() || 0,
     by: item.by,
     kids: item.kids || [],
-    url: item.url || "",
+    url: item.url,
     score: item.score,
     title: item.title,
     descendants: item.descendants || 0,

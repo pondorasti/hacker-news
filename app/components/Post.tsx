@@ -33,19 +33,21 @@ export async function Post({ id, index }: { id: number; index: number }) {
           <h2 className="truncate text-sm font-medium">
             {index}. {post.title}
           </h2>
-          <a
-            href={post.url}
-            className={clsx(
-              "relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100",
-              "cursor-ne-resize text-xs",
-              "text-gray-700 after:bg-orange-500 hover:text-orange-500 dark:text-gray-400 hover:dark:text-orange-500",
-              "transition-colors duration-300 ease-in-out after:transition-transform after:duration-300 after:ease-in-out"
-            )}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {new URL(post.url).host.replace(/^www\./, "")}
-          </a>
+          {post.url && (
+            <a
+              href={post.url}
+              className={clsx(
+                "relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-0 hover:after:scale-x-100",
+                "cursor-ne-resize text-xs",
+                "text-gray-700 after:bg-orange-500 hover:text-orange-500 dark:text-gray-400 hover:dark:text-orange-500",
+                "transition-colors duration-300 ease-in-out after:transition-transform after:duration-300 after:ease-in-out"
+              )}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {new URL(post.url).host.replace(/^www\./, "")}
+            </a>
+          )}
         </div>
 
         <div className="flex space-x-3">

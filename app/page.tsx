@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import { hn } from "../lib/hn"
-import { Post, PostSkeleton } from "./components/posts"
+import { Post, PostSkeleton } from "./components/post"
 
 export default async function Home() {
   const postIds = await hn.getPostIds()

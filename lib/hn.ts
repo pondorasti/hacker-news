@@ -29,24 +29,12 @@ async function getPostIds(type = "topstories", { page = 1, max = 30 } = {}): Pro
   const start = max * (page - 1)
   const end = start + max
 
-  // await new Promise((resolve) =>
-  //   setTimeout(() => {
-  //     resolve(null)
-  //   }, 1000)
-  // )
-
   return ids.slice(start, end)
 }
 
 async function getItem(id: number): Promise<Item | null> {
   const item = await fetchData(`item/${id}`)
   if (!item) return null
-
-  // await new Promise((resolve) =>
-  //   setTimeout(() => {
-  //     resolve(null)
-  //   }, 10000)
-  // )
 
   return {
     id: item.id,

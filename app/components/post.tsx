@@ -16,7 +16,7 @@ export function PostSkeleton() {
 }
 
 const pStyle =
-  "flex items-center space-x-1 text-xs text-gray-600 dark:text-gray-400 truncate leading-[14px]"
+  "flex items-center space-x-1 text-xs text-gray-600 dark:text-gray-400 leading-[14px] whitespace-nowrap overflow-hidden flex-none"
 
 TimeAgo.addDefaultLocale(en)
 const timeAgo = new TimeAgo("en-US")
@@ -27,48 +27,46 @@ export async function Post({ id, index }: { id: number; index: number }) {
   if (!post) return null
 
   return (
-    <>
-      <div className="flex flex-col space-y-1 overflow-hidden rounded-xl p-2 text-zinc-800 dark:text-zinc-100">
-        <div className="flex flex-col items-start space-x-1 sm:flex-row sm:items-baseline">
-          <h2 className="truncate text-sm font-medium">
-            {index}. {post.title}
-          </h2>
-          {post.url && (
-            <a
-              href={post.url}
-              className={clsx(
-                "relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-0 hover:after:scale-x-100",
-                "cursor-ne-resize text-xs",
-                "text-gray-700 after:bg-orange-500 hover:text-orange-500 dark:text-gray-400 hover:dark:text-orange-500",
-                "transition-colors duration-300 ease-in-out after:transition-transform after:duration-300 after:ease-in-out"
-              )}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {new URL(post.url).host.replace(/^www\./, "")}
-            </a>
-          )}
-        </div>
-
-        <div className="flex space-x-3">
-          <p className={pStyle}>
-            <UpArrowIcon />
-            <span className="mt-px">{post.score}</span>
-          </p>
-          <p className={pStyle}>
-            <PersonIcon />
-            <span className="mt-px">{post.by}</span>
-          </p>
-          <p className={pStyle}>
-            <ClockIcon />
-            <span className="mt-px">{timeAgo.format(post.date)}</span>
-          </p>
-          <p className={pStyle}>
-            <CommentIcon />
-            <span className="mt-px">{post.descendants} comments</span>
-          </p>
-        </div>
+    <div className="grid grid-cols-1 grid-rows-[20px_15px] gap-1 rounded-xl p-2 text-zinc-800 dark:text-zinc-100">
+      <div className="flex flex-row flex-nowrap items-baseline justify-start space-x-1 overflow-hidden">
+        <h2 className="truncate whitespace-nowrap text-sm font-medium">
+          {index}. {post.title}
+        </h2>
+        {post.url && (
+          <a
+            href={post.url}
+            className={clsx(
+              "cursor-ne-resize truncate text-xs",
+              "relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-0 hover:after:scale-x-100",
+              "text-gray-700 after:bg-orange-500 hover:text-orange-500 dark:text-gray-400 hover:dark:text-orange-500",
+              "transition-colors duration-300 ease-in-out after:transition-transform after:duration-300 after:ease-in-out"
+            )}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {new URL(post.url).host.replace(/^www\./, "")}
+          </a>
+        )}
       </div>
-    </>
+
+      <div className="flex space-x-3">
+        <p className={pStyle}>
+          <UpArrowIcon />
+          <span className="mt-px">{post.score}</span>
+        </p>
+        <p className={pStyle}>
+          <PersonIcon />
+          <span className="mt-px">{post.by}</span>
+        </p>
+        <p className={pStyle}>
+          <ClockIcon />
+          <span className="mt-px">{timeAgo.format(post.date)}</span>
+        </p>
+        <p className={pStyle}>
+          <CommentIcon />
+          <span className="mt-px">{post.descendants} comments</span>
+        </p>
+      </div>
+    </div>
   )
 }
